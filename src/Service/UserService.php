@@ -2,11 +2,10 @@
 
 namespace App\Service;
 
-use App\Dto\Request\UserRequest;
 use App\Entity\User;
 use App\Interfaces\DtoInterface;
 use App\Repository\UserRepository;
-use Doctrine\ORM\EntityManager;
+use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Exception\ORMException;
 use Doctrine\ORM\OptimisticLockException;
@@ -31,7 +30,7 @@ class UserService
             ->setSex($userRequest->getSex())
             ->setPhone($userRequest->getPhone())
             ->setName($userRequest->getName())
-            ->setBirthday(new \DateTime($userRequest->getBirthday()));
+            ->setBirthday(new DateTime($userRequest->getBirthday()));
 
         $this->entityManager->flush();
 
@@ -49,7 +48,7 @@ class UserService
             ->setSex($userRequest->getSex())
             ->setPhone($userRequest->getPhone())
             ->setName($userRequest->getName())
-            ->setBirthday(new \DateTime($userRequest->getBirthday()));
+            ->setBirthday(new DateTime($userRequest->getBirthday()));
 
         $this->entityManager->persist($user);
         $this->entityManager->flush();
