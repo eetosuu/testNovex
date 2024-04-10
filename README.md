@@ -61,7 +61,7 @@ php bin/console doctrine:fixtures:load
 }
 ```
 ### Update
-Обновляет пользователя. Принимает JSON, возвращает JSON с данными пользователя.
+Обновляет пользователя по ID. Принимает JSON, возвращает JSON с данными пользователя.
 
 ```
 {
@@ -69,7 +69,8 @@ php bin/console doctrine:fixtures:load
     "phone": "+79267174446",
     "sex": "male",
     "name": "Иван Иванов",
-    "email": "ivan.ivanov@gmail.com"
+    "email": "ivan.ivanov@gmail.com",
+    "id": 1
 }
 ```
 
