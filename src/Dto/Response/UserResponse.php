@@ -11,11 +11,17 @@ use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 class UserResponse implements DtoInterface
 {
     private int $id;
+    
     private ?string $email;
+    
     private ?string $name;
+    
     private ?int $age;
+    
     private ?string $sex;
+    
     private ?string $phone;
+    
     #[Context([DateTimeNormalizer::FORMAT_KEY => 'Y-m-d'])]
     private ?DateTime $birthday;
 
