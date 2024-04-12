@@ -20,6 +20,7 @@ class AppFixtures extends Fixture
             $user->setPhone('+7' . $faker->numerify('##########'));
             $user->setSex($faker->randomElement(['male', 'female']));
             $user->setName($faker->name);
+            
             $manager->persist($user);
         }
 
