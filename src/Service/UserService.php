@@ -14,8 +14,10 @@ use Exception;
 
 class UserService
 {
-    public function __construct(private readonly UserRepository $userRepository, private readonly EntityManagerInterface $entityManager)
-    {
+    public function __construct(
+        private readonly UserRepository $userRepository, 
+        private readonly EntityManagerInterface $entityManager
+    ) {
     }
 
     /**
