@@ -15,6 +15,7 @@ class UserRequest implements DtoInterface
     const GROUP_READ = 'read';
     const GROUP_UPDATE = 'update';
     const GROUP_DELETE = 'delete';
+    
     #[Assert\NotBlank(groups: [self::GROUP_DELETE, self::GROUP_UPDATE, self::GROUP_READ])]
     #[UserExistId(groups: [self::GROUP_UPDATE, self::GROUP_READ, self::GROUP_DELETE])]
     #[Groups([self::GROUP_DELETE, self::GROUP_UPDATE, self::GROUP_READ])]
